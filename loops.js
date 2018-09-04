@@ -20,7 +20,7 @@ function whileLoop(n) {
   return 'done'
 }
 
-function doWhile(array) {
+function doWhileLoop(array) {
   var i = 0;
  
   function incrementVariable() {
@@ -28,8 +28,10 @@ function doWhile(array) {
  }
  
  do {
-   array.slice(0, array.length -1)
- } while (array.length > 0 && incrementVariable())
+  var sliced =  array.slice(0, array.length -1)
+   incrementVariable()
+   return sliced
+ } while (array.length > 0 && incrementVariable() )
  
- return array
+ 
 }
